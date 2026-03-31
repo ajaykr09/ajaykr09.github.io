@@ -1117,35 +1117,62 @@
 
       <div class="project-card">
         <div class="project-num">// 001</div>
+        <div class="project-title">Detection-as-Code Lab</div>
+        <div class="project-desc">Wrote and tested 3 production-quality Sigma detection rules covering LSASS credential dumping, PsExec lateral movement, and Registry persistence. Built a Python validation engine that tests rules against simulated Windows event logs — measuring detection rate, false positive rate, and tuning effectiveness per rule.</div>
+        <div class="exp-tags">
+          <span class="tag">Sigma</span><span class="tag">YAML</span><span class="tag">Python</span><span class="tag">MITRE ATT&CK</span><span class="tag">Splunk</span>
+        </div>
+        <div style="margin-top:1rem;">
+          <a href="https://github.com/ajaykr09/detection-as-code" target="_blank" class="btn btn-outline" style="font-size:0.65rem;padding:5px 12px;">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">// 002</div>
+        <div class="project-title">ThreatIntel Dashboard</div>
+        <div class="project-desc">Aggregates live IOC feeds from ThreatFox and URLhaus via free APIs, enriches IPs with AbuseIPDB reputation data, and auto-maps each indicator to MITRE ATT&CK techniques. Scores each IOC 0-100 risk scale and exports a dark-themed HTML report and JSON artifact for SIEM ingestion.</div>
+        <div class="exp-tags">
+          <span class="tag">Python</span><span class="tag">REST APIs</span><span class="tag">Threat Intel</span><span class="tag">AbuseIPDB</span><span class="tag">MITRE ATT&CK</span>
+        </div>
+        <div style="margin-top:1rem;">
+          <a href="https://github.com/ajaykr09/threat-intel-dashboard" target="_blank" class="btn btn-outline" style="font-size:0.65rem;padding:5px 12px;">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">// 003</div>
+        <div class="project-title">IR Simulation Engine</div>
+        <div class="project-desc">Full incident response simulation framework built on NIST SP 800-61r2 covering 4 scenarios — ransomware, C2 beaconing, insider threat, and phishing. Generates a timestamped analyst timeline, IOC inventory, ATT&CK mapping, and a professional HTML report matching real-world IR deliverables.</div>
+        <div class="exp-tags">
+          <span class="tag">Python</span><span class="tag">NIST 800-61r2</span><span class="tag">MITRE ATT&CK</span><span class="tag">DFIR</span>
+        </div>
+        <div style="margin-top:1rem;">
+          <a href="https://github.com/ajaykr09/ir-simulation" target="_blank" class="btn btn-outline" style="font-size:0.65rem;padding:5px 12px;">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">// 004</div>
         <div class="project-title">Cybersecurity Home Lab</div>
-        <div class="project-desc">Virtual SOC lab using Splunk, Suricata IDS, and Kali Linux. Generated attack traffic via Metasploit, Nmap, and brute-force simulations to test detection workflows end-to-end.</div>
+        <div class="project-desc">Virtual SOC lab using Splunk, Suricata IDS, and Kali Linux. Generated attack traffic via Metasploit, Nmap, and brute-force simulations to practice detection workflows, alert investigation, and IOC identification end-to-end.</div>
         <div class="exp-tags">
           <span class="tag">Splunk</span><span class="tag">Suricata</span><span class="tag">Kali Linux</span><span class="tag">Nmap</span>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-num">// 002</div>
+        <div class="project-num">// 005</div>
         <div class="project-title">EDR Lab — Endpoint Detection</div>
-        <div class="project-desc">Simulated EDR agent in Python capable of real-time monitoring of files, processes, network, and registry events. Implemented automated JSON alerting and test scripts for end-to-end workflow validation.</div>
+        <div class="project-desc">Simulated EDR agent in Python with real-time monitoring of files, processes, network, and registry events. Automated JSON alerting for file modifications, process start/stop, and simulated registry activity — demonstrating end-to-end EDR workflow understanding.</div>
         <div class="exp-tags">
           <span class="tag">Python</span><span class="tag">psutil</span><span class="tag">Watchdog</span><span class="tag">JSON</span>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-num">// 003</div>
-        <div class="project-title">LogSentinel</div>
-        <div class="project-desc">Real-time log monitoring tool that parses CSV logs to detect failed logins, unauthorized access, and malware indicators. Modular, lightweight SIEM-style framework built for hands-on log analysis practice.</div>
-        <div class="exp-tags">
-          <span class="tag">Python</span><span class="tag">SIEM</span><span class="tag">Log Analysis</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-num">// 004</div>
+        <div class="project-num">// 006</div>
         <div class="project-title">Phishing Traffic Analysis</div>
-        <div class="project-desc">Applied Wireshark filters and packet dissection to analyze live phishing traffic. Investigated DNS queries, HTTP requests, and TLS handshake anomalies. Documented a repeatable IOC extraction and PCAP analysis workflow.</div>
+        <div class="project-desc">Applied Wireshark filters and packet dissection to analyze phishing campaign traffic. Investigated DNS queries, HTTP requests, and TLS handshake anomalies to extract IOCs including domains, IPs, redirects, and certificates. Built a repeatable PCAP analysis workflow.</div>
         <div class="exp-tags">
           <span class="tag">Wireshark</span><span class="tag">PCAP</span><span class="tag">DNS</span><span class="tag">TLS</span>
         </div>
