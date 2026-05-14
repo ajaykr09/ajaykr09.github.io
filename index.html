@@ -40,6 +40,16 @@
     cursor: none;
   }
 
+  /* Matrix Rain Canvas */
+  #matrix-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.07;
+  }
+
   /* Custom cursor */
   .cursor {
     position: fixed;
@@ -940,6 +950,9 @@
 </head>
 <body>
 
+<!-- Matrix Rain -->
+<canvas id="matrix-canvas"></canvas>
+
 <!-- Custom cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
@@ -1421,6 +1434,34 @@
 </footer>
 
 <script>
+  // Matrix Rain
+  const canvas = document.getElementById('matrix-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+  const cols = Math.floor(canvas.width / 35);
+  const drops = Array(cols).fill(1);
+  const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ';
+  function drawMatrix() {
+    ctx.fillStyle = 'rgba(8, 11, 15, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#57c8f2';
+    ctx.font = '14px Share Tech Mono, monospace';
+    for (let i = 0; i < drops.length; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(char, i * 35, drops[i] * 14);
+      if (drops[i] * 14 > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+  setInterval(drawMatrix, 80);
+
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
